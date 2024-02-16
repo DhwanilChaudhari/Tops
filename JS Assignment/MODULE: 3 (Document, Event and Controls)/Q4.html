@@ -1,0 +1,57 @@
+<!-- Create a form and validate using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="error-message" style="color: red"></div>
+
+    <script>
+      // Function to validate the form
+      function validateForm(event) {
+        event.preventDefault(); // Prevent the form from submitting by default
+
+        // Get form inputs
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const errorMessage = document.getElementById("error-message");
+
+        // Check if name and email are empty
+        if (nameInput.value.trim() === "" || emailInput.value.trim() === "") {
+          errorMessage.textContent = "Name and email are required.";
+          return false; // Stop form submission
+        }
+
+        // Check if email is valid
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          errorMessage.textContent = "Please enter a valid email address.";
+          return false; // Stop form submission
+        }
+
+        // If everything is valid, submit the form
+        errorMessage.textContent = ""; // Clear error message
+        alert("Form submitted successfully!");
+        return true; // Allow form submission
+      }
+
+      // Add event listener to the form
+      const myForm = document.getElementById("myForm");
+      myForm.addEventListener("submit", validateForm);
+    </script>
+  </body>
+</html>

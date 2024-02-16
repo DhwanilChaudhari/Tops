@@ -1,0 +1,20 @@
+What will be the result for these expressions?
+Q1.5 > 4
+
+Q2. "apple" > "pineapple"
+Ans. false
+
+Q3. "2" > "12"
+Ans. True
+
+Q4. undefined == null
+Ans. True
+
+Q5. undefined === null
+Ans. false
+
+Q6.null == "\n0\n"
+Ans. False
+
+Q7. null === +"\n0\n"
+Ans. False

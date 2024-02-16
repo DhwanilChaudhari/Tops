@@ -1,0 +1,2 @@
+Q3. Will alert be shown? if ("0") { alert( 'Hello'); }
+ANS. Hello will show in alert 

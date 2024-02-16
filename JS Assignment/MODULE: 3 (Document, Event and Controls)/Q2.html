@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALERT</title>
+  </head>
+  <body>
+    <button id="alertButton">Alert it!</button>
+    <div class="elmnt">Hello</div>
+    <div class="elmnt">Coder</div>
+    <div class="elmnt">How are you</div>
+
+    <script>
+      const elements = document.querySelectorAll(".elmnt");
+
+      const alertButton = document.getElementById("alertButton");
+      alertButton.addEventListener("click", function () {
+        elements.forEach(function (element) {
+          alert(element.textContent);
+        });
+      });
+    </script>
+  </body>
+</html>
