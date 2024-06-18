@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header_css {
+  background-color: rgba(169, 169, 169, 0.616);
+  min-width: 100px;
+  width: 95vw;
+  display: flex;
+  min-height: 80px;
+  padding: 30px;
+  max-height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header_link {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 50px;
+}
+
+.productcontain {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  min-width: 100px;
+  width: 95vw;
+  min-height: 80px;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  min-height: 100vw;
+  flex-wrap: wrap;
+  gap: 50px;
+}

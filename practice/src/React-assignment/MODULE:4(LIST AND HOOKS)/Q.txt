@@ -1,0 +1,44 @@
+Q. Explain Life cycle in Class Component and functional component with Hooks
+Ans n React, components are the building blocks of a user interface. Both class components and functional components with hooks have lifecycles,
+which refer to the sequence of events that occur during the lifespan of a component, 
+from its creation to its destruction. These lifecycles allow developers to execute code at specific points during the component's existence.
+
+Class Component Lifecycle:
+Class components in React have several lifecycle methods that you can override to perform tasks at specific points in the component's lifecycle:
+
+1.Mounting Phase:
+constructor(props): This is the constructor method where you initialize state and bind event handlers.
+static getDerivedStateFromProps(props, state): It is called before rendering when new props or state are received. It returns an object to update the state or null to indicate that the new props do not require any state updates.
+render(): This method returns the JSX that represents the component's UI.
+componentDidMount(): This method is called after the component is rendered into the DOM. It's a good place to perform actions that require the DOM, like fetching data from a server.
+
+2.Updating Phase:
+
+static getDerivedStateFromProps(props, state): Similar to the mounting phase, but it's invoked before rendering when new props or state are being received.
+shouldComponentUpdate(nextProps, nextState): This method allows you to control if the component should re-render or not. It returns a boolean value.
+render(): Renders the updated UI.
+getSnapshotBeforeUpdate(prevProps, prevState): It's called right before the changes from the virtual DOM are to be reflected in the DOM. It allows the component to capture current UI state.
+componentDidUpdate(prevProps, prevState, snapshot): Invoked immediately after updating occurs. It's good for performing post-update operations like updating the DOM or working with external libraries.
+
+3.Unmounting Phase:
+componentWillUnmount(): This method is invoked immediately before a component is unmounted and destroyed.
+ It's useful for cleanup tasks like cancelling network requests or removing event listeners.
+
+Functional Component with Hooks:
+Functional components can use hooks to achieve similar functionality. The primary hooks for lifecycle events are:
+
+1.useState: Manages state within functional components.
+2.useEffect: Performs side effects in function components. It combines the functionality of various lifecycle methods.
+can replicate componentDidMount, componentDidUpdate, and componentWillUnmount with useEffect by controlling its execution with dependency arrays.
+
+Mounting Phase:
+
+You use useState to initialize state.
+You perform side effects after the initial render using useEffect with an empty dependency array ([]). This emulates componentDidMount.
+Updating Phase:
+
+useEffect with dependencies controls what happens on updates. By providing dependencies, you can conditionally execute code when certain values change, replicating shouldComponentUpdate.
+useEffect with a cleanup function allows you to handle cleanup tasks, similar to componentWillUnmount.
+
+In summary, while class components and functional components with hooks achieve the same lifecycle functionalities, the implementation details differ.
+ Functional components with hooks provide a more concise and composable way to manage component lifecycles.

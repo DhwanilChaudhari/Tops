@@ -1,0 +1,97 @@
+.accordion-header {
+  margin: 0;
+}
+
+.header1_css {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 28px;
+  background-color: #bed9f1;
+  border-radius: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px #0000001a;
+}
+.link_div {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 4px;
+  list-style: circle;
+  gap: 55px;
+
+  color: #040000;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.41);
+  }
+}
+
+.link_div li:hover {
+  font-weight: 500;
+}
+
+.input_tag {
+  box-shadow: none !important;
+  border-radius: 20px;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+}
+
+.search_icon {
+  display: flex;
+  color: #333333;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
