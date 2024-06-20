@@ -8,6 +8,8 @@ import UseEffect from "./6.useEffect/UseEffect.jsx";
 import InputCom from "./7.Input/InputCom.jsx";
 import SimpleRouter from "./8.Router/SimpleRouter/SimpleRouter.jsx";
 import AppRedux2 from "./8.Redux2/AppRedux2.jsx";
+import MiniProjectsHome from "./Mini-Projects/MiniProjectsHome.jsx";
+import AppRedux from "./8.Redux2/AppRedux2.jsx";
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
       {/* {<InputCom />} */}
       {/* {<Com />} */}
       {/* <SimpleRouter /> */}
+      {/* <AppRedux /> */}
       <AppRedux2 />
+      {/* <MiniProjectsHome /> */}
       <ToastContainer />
     </div>
   );

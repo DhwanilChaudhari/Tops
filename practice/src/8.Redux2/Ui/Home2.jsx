@@ -9,7 +9,6 @@ export default function Home2() {
   let data = useSelector((store) => {
     return store.COUNT;
   });
-
   let dispatch = useDispatch();
 
   const addNo = () => {

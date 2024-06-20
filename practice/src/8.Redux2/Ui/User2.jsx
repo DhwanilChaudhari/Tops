@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser } from "../ReduxHome2/user";
+import { addUser, deleteUser } from "../ReduxHome2/user";
 
 export default function User2() {
   let [name, setName] = useState();
+  let [i, setI] = useState();
   const dispatch = useDispatch();
 
   const data = useSelector((store) => {
@@ -13,6 +14,10 @@ export default function User2() {
   const addUserHandler = () => {
     dispatch(addUser(name));
     setName("");
+  };
+  const deleteHandler = (i) => {
+    dispatch(deleteUser(i));
+    setI("");
   };
   return (
     <div>
@@ -32,7 +37,9 @@ export default function User2() {
         {data?.user.map?.((e, i) => {
           return (
             <div key={i}>
-              <li>{e}</li>
+              <li>
+                {e} <button onClick={() => deleteHandler(i)}>Delete</button>
+              </li>
             </div>
           );
         })}

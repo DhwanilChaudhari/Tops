@@ -1,12 +1,11 @@
 import React from "react";
-import Route from "./Router-Pro/Route";
-import Check from "./CheckBox/check";
+import NestRouter from "./Project-NestMart/Router/NestRouter";
 
 export default function MiniProjectsHome() {
   return (
     <div>
       {/* <Route /> */}
-      <Check />
+      <NestRouter />
     </div>
   );
 }

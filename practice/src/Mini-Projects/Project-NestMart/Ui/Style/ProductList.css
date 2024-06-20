@@ -1,0 +1,13 @@
+.product-list {
+  padding: 20px;
+}
+
+.product-list h2 {
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
