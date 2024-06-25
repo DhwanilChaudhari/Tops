@@ -40,10 +40,8 @@ export default function User2() {
       <button className="border px-2 py-1" onClick={addUserHandler}>
         {editIndex === null ? "Add" : "Update"}
       </button>
-
       <hr />
-
-      <ul>
+      <div>
         {data?.user.map?.((e, i) => (
           <div key={i}>
             <li>
@@ -52,7 +50,7 @@ export default function User2() {
             </li>
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
