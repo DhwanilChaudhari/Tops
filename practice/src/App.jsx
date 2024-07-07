@@ -10,6 +10,7 @@ import SimpleRouter from "./8.Router/SimpleRouter/SimpleRouter.jsx";
 import AppRedux2 from "./8.Redux2/AppRedux2.jsx";
 import MiniProjectsHome from "./Mini-Projects/MiniProjectsHome.jsx";
 import AppRedux from "./8.Redux2/AppRedux2.jsx";
+import ReduxHome from "./ReduxAssignment/ReduxFile/ReduxHome.jsx";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* {<Com />} */}
       {/* <SimpleRouter /> */}
       {/* <AppRedux /> */}
-      <AppRedux2 />
+      {/* <AppRedux2 /> */}
+      <ReduxHome />
       {/* <MiniProjectsHome /> */}
       <ToastContainer />
     </div>
